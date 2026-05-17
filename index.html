@@ -2,29 +2,43 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>VK Redirect</title>
+<title>Открыть VK</title>
+
+<style>
+body{
+    font-family: Arial;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+    background:#f5f5f5;
+}
+
+a{
+    padding:18px 28px;
+    background:#0077ff;
+    color:white;
+    text-decoration:none;
+    border-radius:12px;
+    font-size:20px;
+}
+</style>
+</head>
+
+<body>
+
+<a id="vkButton" href="https://vk.com/club237437330">
+Открыть сообщество VK
+</a>
 
 <script>
 const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-if (isMobile) {
-
-    window.location.href = "vk://vk.com/club237437330";
-
-    setTimeout(() => {
-        window.location.href = "https://vk.com/club237437330";
-    }, 1200);
-
-} else {
-
-    window.location.href = "https://vk.com/club237437330";
-
+if(isMobile){
+    document.getElementById('vkButton').href = 'vk://vk.com/club237437330';
 }
 </script>
 
-</head>
-
-<body>
-Переходим в сообщество...
 </body>
 </html>
